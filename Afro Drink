@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afro Birzz | Ethiopian Honey Brew</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&family=Amharic:wght@400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --yellow: #FFD700;
+            --green: #4CAF50;
+            --orange: #FF8C42;
+            --deep-orange: #E65100;
+            --dark-brown: #5D4037;
+            --light-brown: #D7CCC8;
+            --white: #FFFFFF;
+            --beige: #F5F5DC;
+            --gold: #D4AF37;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: var(--beige);
+        }
+        
+        .amharic {
+            font-family: 'Amharic', sans-serif;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--dark-brown) 0%, #3E2723 100%);
+            color: var(--white);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .logo h1 span {
+            color: var(--yellow);
+        }
+        
+        .logo .amharic {
+            font-size: 1.8rem;
+            font-weight: 600;
+            transform: rotate(-3deg);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 5px 0;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--yellow);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        nav a:hover {
+            color: var(--yellow);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1596025682466-3906e0c486a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            margin-top: 70px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .tagline {
+            font-size: 1.4rem;
+            font-style: italic;
+            margin-bottom: 40px;
+            color: var(--yellow);
+            font-weight: 500;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark-brown);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--gold);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--yellow);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--yellow);
+            color: var(--yellow);
+            margin-left: 15px;
+        }
+        
+        .btn-outline:hover {
+            background: var(--yellow);
+            color: var(--dark-brown);
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--dark-brown);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 1.2rem;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 2.2rem;
+            color: var(--dark-brown);
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #444;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .cultural-badge {
+            background: var(--gold);
+            color: var(--dark-brown);
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
+        
+        /* Flavors Section */
+        .flavors-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .flavor-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .flavor-card:hover {
+            transform: translateY(-15px);
+        }
+        
+        .flavor-image {
+            height: 280px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .flavor-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 100%);
+        }
+        
+        .flavor-content {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .flavor-content h3 {
+            font-size: 1.8rem;
+            color: var(--dark-brown);
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .flavor-desc {
+            color: #666;
+            margin-bottom: 20px;
+            min-height: 100px;
+        }
+        
+        .flavor-features {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .feature i {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        
+        .feature span {
+            font-weight: 600;
+            color: var(--dark-brown);
+        }
+        
+        /* Benefits Section */
+        .benefits-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--gold);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .benefit-icon {
+            font-size: 3.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.8rem;
+            color: var(--dark-brown);
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Cultural Section */
+        .cultural-section {
+            background: linear-gradient(rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.1)), url('https://images.unsplash.com/photo-1596025682466-3906e0c486a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            color: var(--white);
+        }
+        
+        .cultural-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .cultural-text {
+            flex: 1;
+        }
+        
+        .cultural-text h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .cultural-text p {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .cultural-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        
+        .cultural-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .dance-motif {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255, 215, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: var(--yellow);
+            z-index: 1;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: """;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            opacity: 0.3;
+        }
+        
+        .testimonial-content {
+            margin-top: 40px;
+            font-style: italic;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--light-brown);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            color: var(--dark-brown);
+            font-size: 1.5rem;
+        }
+        
+        .author-info h4 {
+            color: var(--dark-brown);
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--deep-orange) 0%, var(--dark-brown) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .cta .btn {
+            background: var(--white);
+            color: var(--dark-brown);
+            border: 2px solid var(--white);
+        }
+        
+        .cta .btn:hover {
+            background: transparent;
+            color: var(--yellow);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-brown);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+        }
+        
+        .footer-column p, .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: var(--yellow);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #3E2723;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--gold);
+            color: var(--dark-brown);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #4E342E;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* Ethiopian pattern */
+        .pattern-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23D4AF37" stroke-width="0.5" stroke-dasharray="5,5"/></svg>');
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content,
+            .cultural-content {
+                flex-direction: column;
+            }
+            
+            .hero h2 {
+                font-size: 3rem;
+            }
+            
+            .hero p {
+                font-size: 1.4rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav a {
+                font-size: 1rem;
+                padding: 8px 15px;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                margin: 10px auto;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Afro <span>Birzz</span></h1>
+                <div class="amharic">ብርዝ</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#flavors">Flavors</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#culture">Culture</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="pattern-overlay"></div>
+        <div class="container hero-content">
+            <h2>Pure Ethiopian Heritage in Every Sip</h2>
+            <p>Authentic honey-based beverages brewed with pride in the heart of Ethiopia - sugar-free, digestion-friendly, and perfect for all ages</p>
+            <div class="tagline">"Proudly Brewed in Ethiopia" - Where African Heritage Meets Ethiopian Tradition</div>
+            <a href="#flavors" class="btn">Discover Our Flavors</a>
+            <a href="#benefits" class="btn btn-outline">Health Benefits</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Story</h2>
+                <p>Afro Birzz is where the vibrant spirit of Africa meets the ancient traditions of Ethiopian honey brewing. We honor both the natural beauty of Afro hair and the cultural significance of Birzz (ብርዝ), a traditional Ethiopian honey drink enjoyed for generations.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Rooted in Tradition, Crafted for Modern Life</h3>
+                    <p>Afro Birzz was born from a deep love for Ethiopian culture and the desire to share its treasures with the world. Our name celebrates two powerful identities: "Afro" representing the beauty of natural hair and African heritage, and "Birzz" (ብርዝ), the traditional Ethiopian honey-water drink that has been part of our cultural celebrations for centuries.</p>
+                    
+                    <p>Every can of Afro Birzz is brewed with pure Ethiopian honey, sourced from local beekeepers who follow sustainable practices. We've perfected the art of creating a sugar-free beverage that's both refreshing and beneficial for digestion - perfect for children and adults alike.</p>
+                    
+                    <p>Our packaging features subtle silhouettes of Ethiopian dancers, honoring the graceful movements of Eskista, while the honeycomb pattern and bee motifs pay tribute to the natural origins of our drink.</p>
+                    
+                    <div class="cultural-badge">
+                        <i class="fas fa-leaf"></i> Proudly Brewed in Ethiopia
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1598999433409-4a26d8e6d356?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ethiopian honey harvesting">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flavors Section -->
+    <section id="flavors" style="background-color: #F8F4F0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Flavors</h2>
+                <p>Three unique varieties crafted with Ethiopian honey, each offering a distinct taste experience while maintaining our commitment to health and tradition</p>
+            </div>
+            <div class="flavors-container">
+                <!-- Honey Lemon -->
+                <div class="flavor-card">
+                    <div class="flavor-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1596025682466-3906e0c486a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div style="position: absolute; bottom: 20px; left: 20px; color: white; font-size: 1.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                            <i class="fas fa-lemon"></i> Honey Lemon
+                        </div>
+                    </div>
+                    <div class="flavor-content">
+                        <h3>Honey Lemon</h3>
+                        <p class="flavor-desc">A vibrant blend of Ethiopian honey and fresh lemon, capturing the essence of sunshine in every sip. Refreshing, zesty, and naturally energizing.</p>
+                        <div class="flavor-features">
+                            <div class="feature">
+                                <i class="fas fa-sun"></i>
+                                <span>Sun-Kissed</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-leaf"></i>
+                                <span>Natural</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-balance-scale"></i>
+                                <span>0g Sugar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lime Mint -->
+                <div class="flavor-card">
+                    <div class="flavor-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1596025682466-3906e0c486a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div style="position: absolute; bottom: 20px; left: 20px; color: white; font-size: 1.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                            <i class="fas fa-moon"></i> Lime Mint
+                        </div>
+                    </div>
+                    <div class="flavor-content">
+                        <h3>Lime Mint</h3>
+                        <p class="flavor-desc">Cool and refreshing with the perfect balance of Ethiopian honey, zesty lime, and aromatic mint. A revitalizing experience that soothes the senses.</p>
+                        <div class="flavor-features">
+                            <div class="feature">
+                                <i class="fas fa-temperature-low"></i>
+                                <span>Cooling</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-leaf"></i>
+                                <span>Natural</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-balance-scale"></i>
+                                <span>0g Sugar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Orange Blossom -->
+                <div class="flavor-card">
+                    <div class="flavor-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1596025682466-3906e0c486a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div style="position: absolute; bottom: 20px; left: 20px; color: white; font-size: 1.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                            <i class="fas fa-seedling"></i> Orange Blossom
+                        </div>
+                    </div>
+                    <div class="flavor-content">
+                        <h3>Orange Blossom</h3>
+                        <p class="flavor-desc">A floral delight with Ethiopian honey infused with the delicate aroma of orange blossoms. Sweet, fragrant, and naturally uplifting.</p>
+                        <div class="flavor-features">
+                            <div class="feature">
+                                <i class="fas fa-blossom"></i>
+                                <span>Floral</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-leaf"></i>
+                                <span>Natural</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-balance-scale"></i>
+                                <span>0g Sugar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2>Health Benefits</h2>
+                <p>Our sugar-free honey beverages are crafted to nourish your body while celebrating Ethiopian tradition</p>
+            </div>
+            <div class="benefits-container">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h3>Sugar-Free</h3>
+                    <p>Enjoy the natural sweetness of Ethiopian honey without added sugars. Perfect for health-conscious consumers and those managing blood sugar levels.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Kid-Friendly</h3>
+                    <p>Safe and enjoyable for children of all ages. Our natural ingredients make it the perfect healthy alternative to sugary sodas and artificial drinks.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-stomach"></i>
+                    </div>
+                    <h3>Digestion Support</h3>
+                    <p>Traditional Ethiopian honey has been used for centuries to aid digestion. Our brewing process preserves these natural benefits in every refreshing sip.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Natural Energy</h3>
+                    <p>Experience sustained energy from natural carbohydrates in honey - no crashes, no artificial stimulants, just pure, clean vitality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Section -->
+    <section id="culture" class="cultural-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cultural Celebration</h2>
+                <p>Afro Birzz is more than a drink - it's a celebration of Ethiopian heritage and African identity</p>
+            </div>
+            <div class="cultural-content">
+                <div class="cultural-text">
+                    <h2>The Spirit of Birzz</h2>
+                    <p>In Ethiopian tradition, Birzz (ብርዝ) is more than just a honey beverage - it's a symbol of hospitality, community, and celebration. Served during festivals and gatherings, it represents the sweetness of life and the bonds that connect us.</p>
+                    
+                    <p>Our brand name "Afro Birzz" intentionally celebrates two powerful cultural identities: "Afro" representing the beauty and pride of natural hair and African heritage, and "Birzz" connecting us to Ethiopian tradition. This fusion creates a unique beverage experience that honors both our past and present.</p>
+                    
+                    <p>The subtle dancer silhouettes on our packaging are inspired by the graceful movements of Eskista, Ethiopia's traditional shoulder dance. These elegant figures represent the joy, rhythm, and cultural expression that flows through our community.</p>
+                    
+                    <p>Every can features the phrase "Proudly Brewed in Ethiopia" - a testament to our commitment to authenticity and cultural pride. When you drink Afro Birzz, you're not just enjoying a beverage - you're participating in a centuries-old tradition of celebration and community.</p>
+                </div>
+                <div class="cultural-image">
+                    <img src="https://images.unsplash.com/photo-1596025682466-3906e0c486a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ethiopian cultural celebration">
+                    <div class="dance-motif">
+                        <i class="fas fa-drum"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section style="background-color: #F8F4F0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>What People Say</h2>
+                <p>Hear from our community who have embraced Afro Birzz as part of their daily celebration</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "As a mother of three, finding a healthy drink my kids love has been challenging. Afro Birzz has become their favorite! The Honey Lemon flavor is perfect for hot days, and I love that it's sugar-free and aids digestion."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">T</div>
+                        <div class="author-info">
+                            <h4>Tesfaye A.</h4>
+                            <p>Parent & Community Leader</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "I'm proud to share Afro Birzz at my Ethiopian restaurant. Our customers love the authentic taste and the cultural story behind it. The Orange Blossom flavor has become a signature drink that connects people to our heritage."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Meskerem D.</h4>
+                            <p>Restaurant Owner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "As someone with Afro hair, seeing my identity celebrated in a product that's also deeply rooted in Ethiopian culture means so much. The Lime Mint is my go-to for a refreshing boost during my busy days."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">K</div>
+                        <div class="author-info">
+                            <h4>Kofi B.</h4>
+                            <p>Cultural Advocate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta">
+        <div class="container">
+            <h2>Join the Celebration</h2>
+            <p>Experience the authentic taste of Ethiopia with our sugar-free, digestion-friendly honey beverages. Perfect for the whole family and a celebration of African heritage.</p>
+            <a href="#" class="btn">Get Your Afro Birzz Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Afro Birzz</h3>
+                    <p>Proudly brewed in Ethiopia with pure honey, traditional methods, and cultural pride. Our sugar-free beverages celebrate both African heritage and Ethiopian tradition.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#flavors">Our Flavors</a>
+                    <a href="#benefits">Health Benefits</a>
+                    <a href="#culture">Cultural Story</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Flavors</h3>
+                    <a href="#">Honey Lemon</a>
+                    <a href="#">Lime Mint</a>
+                    <a href="#">Orange Blossom</a>
+                    <a href="#">Brewing Process</a>
+                    <a href="#">Product Information</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+                    <p><i class="fas fa-envelope"></i> info@afrobirzz.com</p>
+                    <p><i class="fas fa-phone"></i> +251 11 123 4567</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 5PM</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Afro Birzz. All rights reserved. Proudly Brewed in Ethiopia. | "Birzz" (ብርዝ) is a traditional Ethiopian honey-water drink.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.3)';
+                header.style.background = 'linear-gradient(135deg, #4E342E 0%, #3E2723 100%)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
+                header.style.background = 'linear-gradient(135deg, #5D4037 0%, #3E2723 100%)';
+            }
+        });
+    </script>
+</body>
+</html>
